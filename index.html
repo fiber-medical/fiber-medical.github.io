@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="cache-control" content="no-cache">
 <meta charset="UTF-8">
-<title>ボーダーライン</title>
+<title>繊維×医療|繊維で医療を考える</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
 <link rel="stylesheet" type="text/css" href="css/design69.css" media="screen">
@@ -23,7 +23,7 @@
 
         <div id="siteInfo" class="siteInfo">
             <div class="siteName">
-                <h1>サイト名</h1>
+                <h1>繊維で医療を考える</h1>
                 <div class="url">https://anatanosaito.jp</div>
             </div>
             <div class="aboutSite">
@@ -34,7 +34,17 @@
 
         <ul>
             <li><a href="#link_info">information</a></li>
-            <li><a href="">00/00</a></li>
+            <span>LastEditing:</span><div class="lastUp"><time id="modify"></time>
+<script>
+/* 更新日の取得 */
+const last = new Date(document.lastModified);
+const year = last.getFullYear();
+const month = last.getMonth() + 1;
+const date = last.getDate();
+/* 日付を書き換える */
+const target = document.getElementById('modify');
+target.textContent = year + '-' + month + '-' + date;
+</script></a></div>
             <li><a href="#link_contact">contact</a></li>
         </ul>
 
@@ -82,11 +92,11 @@
     </h2>
 
     <!-- ダミーフォーム -->
-    <form class="mailForm space">
-        <input type="text" placeholder="お名前" class="text"><br>
-        <textarea placeholder="メッセージを入力してください。" class="text"></textarea><br>
-        <input type="submit" value="送信" class="button"><input type="reset" value="消去" class="button">
-    </form>
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSenfo5BY-ekYg9VsIja9-RJmm_n4SupZHMsEIvcyg4yucsiPw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+	<div class="c-form__item">
+
+
+        
     <!-- /ダミーフォーム -->
 
     </section>
