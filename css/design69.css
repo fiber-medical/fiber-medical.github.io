@@ -1,0 +1,469 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* フォントのライセンス表記 */
+/*
+'Inter' is licensed under the Open Font License.
+https://fonts.google.com/specimen/Inter
+*/
+
+/* リセットCSS */
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:bolder}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+
+/* 基本設定 */
+:root {
+    --mainColor: #d7eff7;
+}
+html {
+    background: transparent;
+    font-size: 62.5%;
+}
+body {
+    min-height: 100vh;
+    background: #fff;
+    color: #454f55;
+    font-size: 1.3rem;
+    font-family: 'メイリオ', 'ヒラギノ角ゴ', sans-serif;
+    letter-spacing: 0.2em;
+    line-height: 1.8;
+}
+a {
+    text-decoration: none;
+}
+h2,
+h3,
+h4,
+.mainNav li a,
+.url {
+    font-family: 'Inter', sans-serif;
+}
+h2 {
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+    position: relative;
+    margin: 40px 0 20px;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+h2::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #899297;
+    mix-blend-mode: lighten;
+    z-index: 2;
+}
+h2.plain {
+    padding-top: 50px;
+}
+h2.plain::before {
+    content: none;
+}
+h2 > .icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    padding: 0 20px;
+    margin-bottom: 2rem;
+    background: #fff;
+    box-sizing: border-box;
+    outline: var(--mainColor) solid 2px;
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 70px;
+    object-fit: contain;
+    text-align: center;
+}
+
+h3 {    
+    display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+    margin: 30px 0 5px;
+    color: #5b92a5;
+    font-weight: normal;
+}
+h3::after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 25px;
+    margin-left: 40px;
+    border-left: var(--mainColor) solid 3px;
+    box-sizing: border-box;
+    transform: rotate(-20deg);
+    transform-origin: left top;
+}
+h3 > span {
+    display: inline-block;
+    min-width: 150px;
+    padding: .3rem 2rem;
+    background: var(--mainColor);
+    border: var(--mainColor) solid 2px;
+    color: #4c656d;
+    text-align: center;
+}
+h4 {
+    margin: 15px 10px;
+    font-weight: normal;
+}
+em {
+    border-bottom: var(--mainColor) solid 2px;
+}
+strong {
+    background: var(--mainColor);
+    color: #222;
+}
+ul,
+ol {
+    list-style: none;
+}
+input[type="text"],
+input[type="submit"],
+textarea,
+button,
+select {
+    background: #fff;
+    border: #dbdbdb solid 1px;
+    border-radius: 0%;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+
+/* 段落、余白 */
+p {
+    padding: 0 2em;
+}
+section {
+    margin: 10vh 0;
+}
+
+.borderBox {
+    width: 90%;
+    padding: 1em;
+    margin: 5vh auto;
+    background: #f8f8f8;
+}
+
+.pageWrap {
+    position: relative;
+    width: 55%;
+     min-width: 700px;
+     max-width: 1000px;
+    padding: 0 5vh;
+    margin: 5vh auto 10vh;
+    background: #ffffff56;
+}
+.pageWrap a {
+    color: #66a5b9;
+}
+.pageWrap a:hover {
+    color: #aad1dd;
+}
+
+.space {
+    margin: 2rem 2em;
+}
+
+
+/* メールフォーム */
+.mailForm {
+    text-align: center;
+}
+.mailForm .text {
+    width: 60%;
+     max-width: 500px;
+    padding: .3em;
+    margin-bottom: 1em;
+}
+textarea.text {
+    height: 100px;
+}
+.mailForm .button {
+    padding: .3em 1.2em;
+    margin-right: 1em;
+    background: var(--mainColor);
+    border: none;
+}
+
+
+/* ブックマークリスト */
+.bkmList {
+    display: flex;
+     flex-wrap: wrap;
+     align-items: flex-end;
+}
+.bkmList li {
+    margin: 0 1rem;
+}
+
+
+/* ヘッダー */
+.mainHeader {
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    position: relative;
+    height: 100vh;
+    padding: 10vh 0 0;
+    box-sizing: border-box;
+}
+.mainHeader::before {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 65%;
+    background: url('../img/design69_3_2.png') center / 70% var(--mainColor);
+}
+
+
+.siteInfo {
+    display: flex;
+     justify-content: center;
+     align-items: flex-end;
+    padding: 50px 0 20px;
+    box-sizing: border-box;
+}
+.siteInfo::after {
+    align-self: center;
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    border-top: var(--mainColor) solid 2px;
+    box-sizing: border-box;
+    transform: rotate(10deg);
+    transform-origin: right top;
+}
+
+.siteName {
+    max-width: 300px;
+    padding-right: 10px;
+    text-align: right;
+}
+h1 {
+    font-size: 2.5em;
+}
+.url {
+    font-size: 1.1rem;
+}
+.aboutSite {
+    order: 1;
+    padding: 10px 15px;
+    border: var(--mainColor) solid 2px;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+
+/* ナビゲーション */
+.mainNav {
+    display: flex;
+     flex-wrap: wrap;
+     align-items: flex-end;
+    width: 100%;
+    padding: 0 100px 0;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.mainNav ul {
+    display: flex;
+     flex-wrap: wrap;
+     justify-content: flex-end;
+     align-items: center;
+    position: sticky;
+     top: 0;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0 0 30px auto;
+}
+.stop ul {
+    position: fixed;
+     top: 0;
+     left: 0;
+    padding: 10px 100px 10px 0;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.mainNav li a {
+    display: inline-flex;
+     flex-direction: column;
+    padding: .5em 1em;
+    color: #273942;
+}
+.mainNav li a::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 2px;
+    background: transparent;
+    box-sizing: border-box;
+    transition: .3s;
+}
+.mainNav li a:hover::after {
+    width: 100%;
+    background: var(--mainColor);
+}
+.page {
+    border-bottom: var(--mainColor) solid 4px;
+}
+
+
+
+/* トップにスクロール */
+.backTop {
+    position: fixed;
+     bottom: 10px;
+     right: 3%;
+    opacity: 0;
+    transition: .3s;
+    visibility: hidden;
+    z-index: 2;
+}
+.stop .backTop {
+    opacity: 1;
+    visibility: visible;
+}
+.backTop a {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    background: url('../img/design69_3_2.png') center / 120% var(--mainColor);
+    color: #797979;
+    line-height: 4em;
+    text-align: center;
+}
+
+
+/* フッター（削除OK※デフォルト非表示） */
+.mainFooter {
+    display: none;
+    margin: 10vh auto;
+    text-align: center;
+    font-size: 1rem;
+    opacity: .3;
+}
+.mainFooter a {
+    color: #66a5b9;
+}
+
+
+/* レスポンシブ調整用 */
+@media (max-width:800px) {
+    body {
+        font-size: 1.2rem;
+    }
+    h2::before {
+        width: 50px;
+        height: 50px;
+        background: #a9bbc5;
+    }
+    h2 > .icon {
+        width: 50px;
+        height: 50px;
+        padding: 0 10px;
+        margin-bottom: 1rem;
+        line-height: 50px;
+    }
+    h3 > span {
+        min-width: 80px;
+        padding: .2rem 1rem;
+    }
+    h3::after {
+        height: 20px;
+    }
+    .borderBox {
+        padding: 1em 0;
+    }
+    .pageWrap {
+        width: 90%;
+         min-width: 200px;
+         max-width: 500px;
+        padding: 0;
+    }
+    .space {
+        margin: 2rem 1em;
+    }
+    .mailForm .text {
+        width: 100%;
+    }
+    .mainHeader {
+        justify-content: flex-start;
+        padding: 50px 0 0;
+    }
+    .mainHeader::before {
+        width: 80%;
+        height: 40%;
+        background-size: 150%;
+    }
+    .siteInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 0 0;
+    }
+    .siteInfo::after {
+        order: 1;
+        align-self: unset;
+        width: 2px;
+        height: 20px;
+        margin-left: 50px;
+        border-top: none;
+        border-left: var(--mainColor) solid 2px;
+        transform: rotate(20deg);
+    }
+    .siteName {
+        order: 2;
+        text-align: unset;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .url {
+        color: #8ba6af;
+    }
+    .mainNav {
+        width: 85%;
+         max-width: 500px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .mainNav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .mainNav li a {
+        padding: .2rem 1em;
+    }
+    .mainNav li a::after {
+        content: none;
+    }
+    .backTop {
+        opacity: 1;
+        visibility: visible;
+    }
+    .backTop a {
+        width: 3em;
+        height: 3em;
+        line-height: 3em;
+    }
+    .page .url {
+        display: none;
+    }
+}
+
