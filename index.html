@@ -92,9 +92,39 @@ target.textContent = year + '-' + month + '-' + date;
     </h2>
 
     <!-- ダミーフォーム -->
-            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSenfo5BY-ekYg9VsIja9-RJmm_n4SupZHMsEIvcyg4yucsiPw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
-	<div class="c-form__item">
-
+	    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSenfo5BY-ekYg9VsIja9-RJmm_n4SupZHMsEIvcyg4yucsiPw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+<div class="Form">
+	<div class="Form-Item">
+		<p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>お名前</p>
+    <input type="text" class="Form-Item-Input" placeholder="例）山田太郎" name="entry.1866116375">
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>名前(フリガナ)</p>
+    <input type="text" class="Form-Item-Input" placeholder="例）ヤマダタロウ" name="entry.18919429">
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>年齢</p>
+    <input type="text" class="Form-Item-Input" placeholder="例）10歳" name="entry.1720266287">
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>性別</p>
+ <select name="entry.834280007">
+  <option value="">男</option>
+  <option value="">女</option>
+  <option value="">その他</option>
+</select>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label">メールアドレス</p>
+    <input type="email" class="Form-Item-Input" placeholder="例）yamada@example.com" name="entry.">
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+    <textarea class="Form-Item-Textarea" name="entry.693179250"></textarea>
+  </div>
+  <input type="submit" class="Form-Btn" value="送信する">
+</div>
+	    </form>
 
         
     <!-- /ダミーフォーム -->
@@ -147,6 +177,7 @@ target.textContent = year + '-' + month + '-' + date;
 <!-- フッター（削除OK※デフォルト非表示） -->
 <footer class="mainFooter">
     <p>designed by <a href="https://ragusnon.wwww.jp" rel="noopener">無糖</a></p>
+    <p>©medicalfiber-fuzoku-shinshu-u 2023 All Rights Reserved.</p>
 </footer>
 <!-- /フッター -->
 
