@@ -10,6 +10,76 @@ t<!DOCTYPE html>
 <link rel="icon" type="image/png" href="img/design69_favicon.png">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/design69_script.js"></script>
+<style>
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #f0f0f0;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+form {
+background-color: #fff;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+width: 400px;
+}
+
+h2 {
+text-align: center;
+color: #3498db;
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+margin: 15px 0 5px;
+font-weight: bold;
+color: #555;
+}
+
+input, select, textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 6px;
+}
+
+textarea {
+resize: vertical;
+}
+
+.dob-container {
+display: flex;
+justify-content: space-between;
+}
+
+.dob-container select {
+width: calc(33.33% - 5px);
+}
+
+button {
+background-color: #3498db;
+color: #fff;
+padding: 12px 20px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+width: 100%;
+display: inline-block;
+}
+
+button:hover {
+background-color: #2980b9;
+}
+</style>
 </head>
 <body>
 <!-- トップに戻る用アンカー -->
@@ -61,7 +131,6 @@ target.textContent = year + '-' + month + '-' + date;
 
 <!-- メインコンテンツ -->
 <main class="pageWrap">
-
     <section id="link_info" class="box">
         <h2>
             <span class="icon">?</span>
@@ -92,42 +161,31 @@ target.textContent = year + '-' + month + '-' + date;
     </h2>
 
     <!-- ダミーフォーム -->
-	    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSenfo5BY-ekYg9VsIja9-RJmm_n4SupZHMsEIvcyg4yucsiPw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
-<div class="Form">
-	<div class="Form-Item">
-		<p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>お名前</p>
-    <input type="text" class="Form-Item-Input" placeholder="例）山田太郎" name="entry.1866116375">
-  </div>
-  <div class="Form-Item">
-    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>名前(フリガナ)</p>
-    <input type="text" class="Form-Item-Input" placeholder="例）ヤマダタロウ" name="entry.18919429">
-  </div>
-  <div class="Form-Item">
-    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>年齢</p>
-    <input type="text" class="Form-Item-Input" placeholder="例）10歳" name="entry.1720266287">
-  </div>
-  <div class="Form-Item">
-    <p class="seletbox-003"><span class="Form-Item-Label-Required">必須</span>性別</p>
-    <select name="entry.834280007">
-        <option>男</option>
-        <option>女</option>
-        <option>その他</option>
-    </select>
-  </div>
-  <div class="Form-Item">
-    <p class="Form-Item-Label">メールアドレス</p>
-    <input type="text" class="Form-Item-Input" placeholder="例）yamada@example.com" name="entry.1750445192">
-  </div>
-  <div class="Form-Item">
-    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
-    <textarea class="Form-Item-Textarea" placeholder="例）〇〇をしてみてはどうでしょうか" name="entry.693179250"></textarea>
-  </div>
-  <input type="submit" class="Form-Btn" value="送信する">
-</div>
-	    </form>
+<form  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSenfo5BY-ekYg9VsIja9-RJmm_n4SupZHMsEIvcyg4yucsiPw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+<h2>採用応募フォーム</h2>
 
-        
-    <!-- /ダミーフォーム -->
+<label for="name">名前*:</label>
+<input type="text" id="name" name="entry.1866116375" placeholder="山田 太郎" required>
+
+<label for="kana">フリガナ*:</label>
+<input type="text" id="kana" name="entry.18919429" placeholder="ヤマダ タロウ" required>
+
+<label for="email">メールアドレス:</label>
+<input type="email" id="email" name="entry.1750445192" placeholder="yamada@example.com">
+
+<label for="gender">性別*:</label>
+<select id="gender" name="entry.834280007" required>
+<option disabled selected>選択してください</option>
+<option value="男">男</option>
+<option value="女">女</option>
+<option value="その他">その他</option>
+
+<label for="article">お問い合わせ内容*:</label>
+<p>画像などを挿入する必要がある場合，<a href="https://d.kuku.lu/">ファイルなう</a>などのサービスを利用してリンクを入力してください。</p>
+<textarea id="article" name="entry.693179250" placeholder="繊維についての資料です。" rows="4" required></textarea>
+
+<button type="submit">送信する</button>
+</form>
 
     </section>
 
