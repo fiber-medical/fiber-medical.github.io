@@ -7,7 +7,15 @@
 <meta name="description" content="ここにサイト説明を入れます">
 <link rel="stylesheet" href="css/style.css">
 </head>
-
+<script type="text/javascript">
+    let submitted = false;
+</script>
+<iframe
+    name="hidden_iframe"
+    id="hidden_iframe"
+    style="display: none"
+    onload="if(submitted){window.location='thanks.html';}"
+></iframe>
 <body>
 
 <div id="container">
