@@ -9,6 +9,16 @@
 <link rel="stylesheet" type="text/css" href="css/design77.css" media="screen">
 <link rel="icon" type="image/png" href="img/design77_favicon.png">
 </head>
+<!-- フォームのサンクスページ -->
+<script type="text/javascript">
+    let submitted = false;
+</script>
+<iframe
+    name="hidden_iframe"
+    id="hidden_iframe"
+    style="display: none"
+    onload="if(submitted){window.location='thanks.html';}"
+></iframe>
 <body>
 <!-- ↓トップに戻る用アンカー -->
 <a id="link_top"></a>
@@ -50,31 +60,73 @@
         <section id="contact" class="box">
             <h2>contact</h2>
             <h3><span>question/opinion</span></h3>
+            <p>ご質問やご感想などありましたら、お気軽にお問い合わせください。</p><p><span style="color: red;">※</span>が付いているものは必須です。</p>
             <form
                 action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSenfo5BY-ekYg9VsIja9-RJmm_n4SupZHMsEIvcyg4yucsiPw/formResponse"
                 method="POST"
                 target="hidden_iframe"
                 onsubmit="submitted=true;"
             >
-            <label for="name">お名前</label>
+            <label for="name">お名前</label><span style="color: red;">※</span>
             <input
                 name="entry.1866116375"
                 class="form"
                 id="name"
                 placeholder="山田太郎"
                 type="text"
-                required="required"
+                required
             />
-            <label for="furigana-name">フリガナ</label>
+            <br>
+            <label for="furigana-name">フリガナ</label><span style="color: red;">※</span>
             <input
                 name="entry.18919429"
                 class="form"
                 id="furigana-name"
                 placeholder="ヤマダタロウ"
                 type="text"
-                required="required"
+                required
             />
-            <input type="submit" value="送信" onClick="return check();" class="button">
+            <br>
+            <label for="age">年齢</label><span style="color: red;">※</span>
+            <input
+                name="entry.1720266287"
+                class="form"
+                id="age"
+                placeholder="100"
+                type="number"
+                required
+            />
+            <br>
+            <label for="gender">性別</label><span style="color: red;">※</span>
+            <select name="entry.834280007" class="form" id="gender" required>
+                <option selected disabled>選択してください</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+                <option value="その他">その他</option>
+            </select>
+            <br>
+            <label for="email">メールアドレス</label>
+            <p>ご質問など、返信が必要な場合はご入力ください。</p>
+            <input
+                name="entry.1750445192"
+                class="form"
+                id="email"
+                placeholder="yamada@example.com"
+                type="email"
+                required
+            />
+            <br>
+            <label for="text">ご質問・ご感想</label><span style="color: red;">※</span>
+            <textarea
+                name="entry.693179250"
+                class="form"
+                id="text"
+                placeholder="ご質問やご感想など、ご自由にお書きください。"
+                required
+            >
+            </textarea>
+            <br>
+            <input type="submit" value="送信" class="button">
                 
             <h4><span>heading4</span></h4>
             <p><a href="">リンク</a>と<em>強調</em>と<strong>もっと強調</strong></p>
