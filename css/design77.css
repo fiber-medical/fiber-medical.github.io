@@ -123,6 +123,12 @@ textarea {
     font-size: 95%;
     line-height: 1.5;
 }
+select {
+    border: #88b5cf solid 1px;
+    font-family: inherit;
+    font-size: 95%;
+    line-height: 1.5;
+}
 .form,
 .button {
     padding: 5px;
@@ -134,6 +140,15 @@ textarea {
     padding: 5px 10px;
     background: #88b5cf;
     color: #fff;
+}
+form dl dt{
+  width: 165px;
+  padding:10px 0;
+  float:left;
+  clear:both;
+}
+form dl dd{
+  padding:10px 0;
 }
 .mailForm .form {
     width: 70%;
@@ -223,44 +238,6 @@ p {
 }
 
 
-/* ログページ */
-.logWrap h2 {
-    margin-top: 80px;
-}
-.logList {
-    display: grid;
-     grid-template-columns: auto 1fr;
-     gap: 15px 10px;
-}
-.logWrap dd {
-    align-self: start;
-    padding: 1px 10px;
-    margin: 0 0 0;
-    background: #d5e3ea;
-}
-.logList dt {
-    padding: 1px 0;
-}
-.logList p {
-    margin: 0 .5em;
-}
-.logOpen {
-    margin-left: .5em;
-    cursor: pointer;
-}
-.logOpen::before {
-    content: '追記';
-}
-.more {
-    height: 0;
-    overflow: hidden;
-    transition: .5s;
-}
-.moreText {
-    padding: .5em 0 0 1em;
-    box-sizing: border-box;
-    color: #8d9da3;
-}
 
 
 
