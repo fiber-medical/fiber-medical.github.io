@@ -38,22 +38,44 @@
 <!-- メインコンテンツ -->
 <div class="pageWrap h2-count">
     <main class="mainWrap">
-        <section id="link_info" class="box">
+        <section id="information" class="box">
             <h2>information</h2>
             <h3><span>about</span></h3>
-            <p>ここは○○を取り扱う××サイトです。○○な内容が登場するので苦手な方はご注意ください。</p>
-            <h3><span>contact</span></h3>
-            <form class="nameChangeForm space">
-                <input type="text" placeholder="名字" class="form">
-                <input type="text" placeholder="名前" class="form">
-                <input type="submit" value="input" class="button">
-            </form>
+            <p>このサイトは、<em>信州大学教育学部附属長野中学校 </em>1学年総合 繊維で未来を考える <em>繊維×医療</em>チームの特設サイトです。</p>
+            <p>繊維×医療チームへの<em>お問い合わせ</em>や<em>ご質問・ご感想など</em>がある場合は<a href="#contact">こちらから</a>お願いします。</p>
+            <h3><span>administrator</span></h3>
+            このサイトは繊維×医療チームの代表者が管理をしています。
         </section>
 
-        <section class="box">
-            <h2>heading2</h2>
-            <h2 class="h2-plain"><div>H</div>heading2</h2>
-            <h3><span>heading3</span></h3>
+        <section id="contact" class="box">
+            <h2>contact</h2>
+            <h3><span>question/opinion</span></h3>
+            <form
+                action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSenfo5BY-ekYg9VsIja9-RJmm_n4SupZHMsEIvcyg4yucsiPw/formResponse"
+                method="POST"
+                target="hidden_iframe"
+                onsubmit="submitted=true;"
+            >
+            <label for="name">お名前</label>
+            <input
+                name="entry.1866116375"
+                class="form"
+                id="name"
+                placeholder="山田太郎"
+                type="text"
+                required="required"
+            />
+            <label for="furigana-name">フリガナ</label>
+            <input
+                name="entry.18919429"
+                class="form"
+                id="furigana-name"
+                placeholder="ヤマダタロウ"
+                type="text"
+                required="required"
+            />
+            <input type="submit" value="送信" onClick="return check();" class="button">
+                
             <h4><span>heading4</span></h4>
             <p><a href="">リンク</a>と<em>強調</em>と<strong>もっと強調</strong></p>
         </section>
