@@ -32,6 +32,19 @@ ul,ol {
     list-style: none;
 }
 
+/*selection*/
+::-moz-selection {
+    color: #fff;
+}
+::selection {
+    color: #fff;
+}
+::-moz-selection {
+    background-color: #4878a4;
+}
+::selection {
+    background-color: #4878a4;
+}
 
 /* フォント指定まとめて */
 h1,
