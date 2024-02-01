@@ -1,0 +1,546 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+/* フォントのライセンス表記 */
+/*
+'Roboto Condensed' is licensed under the Apache License 2.0.
+(http://www.apache.org/licenses/LICENSE-2.0)
+
+You can download the original font from here.
+https://fonts.google.com/specimen/Roboto+Condensed
+*/
+
+
+/* 基本設定 */
+html {
+    background: transparent;
+    font-size: 62.5%;
+}
+body {
+    background: #fff;
+    min-height: 100vh;
+    color: #1d3259;
+    font-size: 1.3rem;
+    font-family: 'メイリオ', 'ヒラギノ角ゴ', sans-serif;
+    letter-spacing: 0.2em;
+    line-height: 1.8;
+}
+a {
+    text-decoration: none;
+}
+ul,ol {
+    list-style: none;
+}
+
+
+/* フォント指定まとめて */
+h1,
+h2,
+h3,
+h4,
+.logList dd,
+.mainHeader,
+.mainNav,
+.backTop {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+
+}
+
+
+/* 見出し */
+.h2-count {
+    counter-reset: count;
+}
+h2 {
+    margin: 10px 0 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+h2 > div,
+h2::before {
+    display: block;
+    color: #97b0bf;
+    font-size: 2.5em;
+    font-weight: lighter;
+    line-height: 1;
+}
+.h2-count h2::before {
+    counter-increment: count;
+    content: counter(count, decimal-leading-zero);
+}
+.h2-count .h2-plain::before {
+    content: none;
+}
+h3 {
+    padding: 0;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+h3 > span {
+    display: inline-block;
+    position: relative;
+    padding: 3px 10px;
+}
+h3 > span::before {
+    content: '';
+    display: block;
+    position: absolute;
+     left: 0;
+     bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-bottom: #363a3b solid 2px;
+    box-sizing: border-box;
+}
+h3 > span::after {
+    content: '';
+    display: block;
+    position: absolute;
+     left: 100%;
+     bottom: 0;
+    width: 30px;
+    height: 8px;
+    background: url('../img/design77_arrow.svg') left center / auto 100% no-repeat;
+}
+
+h4 {
+    margin: 10px;
+    line-height: 25px;
+}
+h4 > span {
+    padding: 5px 10px;
+    background: #d5dcea;
+    background: #d5e3ea;
+}
+
+
+/* フォーム関連 */
+input[type],
+textarea {
+    border: #88b5cf solid 1px;
+    font-family: inherit;
+    font-size: 95%;
+    line-height: 1.5;
+}
+.form,
+.button {
+    padding: 5px;
+}
+.form {
+    background: #fff;
+}
+.button {
+    padding: 5px 10px;
+    background: #88b5cf;
+    color: #fff;
+}
+.mailForm .form {
+    width: 70%;
+     max-width: 400px;
+    margin-bottom: 5px;
+}
+.nameChangeForm .form {
+    width: 10em;
+}
+
+
+/* 強調 */
+em {
+    background: linear-gradient(#0000 85%, #88b4cf 85%, #88b4cf 95%, #0000 95%) no-repeat;
+    color: #777;
+    font-style: normal;
+
+}
+strong {
+    background: #788fa2;
+    color: #fff;    font-weight: bolder;
+}
+
+
+/* 段落、余白、基本リンク色 */
+p {
+    margin: 0 2em;
+}
+.box {
+    margin: 80px 0;
+    scroll-margin-top: 50px;
+    scroll-snap-margin-top: 50px;/* safari用 */
+}
+
+.space {
+    margin: 2em;
+}
+
+.pageWrap {
+    position: relative;
+    width: 60%;
+     max-width: 1100px;
+     min-width: 650px;
+    padding: 50px;
+    margin: 0 auto 0 35%;
+    background: #fff;
+    box-sizing: border-box;
+}
+.pageWrap a {
+    color: #639db4;
+}
+.mainWrap,
+.logWrap {
+    margin: 100px 0 10vh;
+}
+
+
+/* メインコンテンツ */
+.mainContents h4 {
+    margin-top: 2em;
+}
+.contentsList {
+    display: flex;
+     flex-wrap: wrap;
+    margin: 1em 2em;
+}
+.contentsList a:visited {
+    color: #667d86;
+}
+.longList li::after {
+    content: '-';
+    margin: 0 .5em;
+    color: #a2b5d2;
+}
+.longList li:last-of-type::after,
+.longList .longInfo::after {
+    content: none;
+}
+.longInfo {
+    width: 100%;
+    margin-bottom: 5px;
+    color: #7886a2;
+    font-size: .9em;
+}
+.shortList li {
+    margin: 0 1.5em 5px 0;
+}
+
+
+/* ログページ */
+.logWrap h2 {
+    margin-top: 80px;
+}
+.logList {
+    display: grid;
+     grid-template-columns: auto 1fr;
+     gap: 15px 10px;
+}
+.logWrap dd {
+    align-self: start;
+    padding: 1px 10px;
+    margin: 0 0 0;
+    background: #d5e3ea;
+}
+.logList dt {
+    padding: 1px 0;
+}
+.logList p {
+    margin: 0 .5em;
+}
+.logOpen {
+    margin-left: .5em;
+    cursor: pointer;
+}
+.logOpen::before {
+    content: '追記';
+}
+.more {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.moreText {
+    padding: .5em 0 0 1em;
+    box-sizing: border-box;
+    color: #8d9da3;
+}
+
+
+
+/* メインヘッダー */
+.mainHeader {
+    display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+    position: fixed;
+     top: 0;
+     left: 0;
+    width: 30%;
+    height: 100vh;
+    padding: 10vh 30px 50px;
+    background: url('../img/design77_main.png') right center / cover #cfe0ea;
+    box-sizing: border-box;
+}
+
+.mainNavInfo {
+    position: relative;
+    margin: auto 0;
+    text-align: center;
+}
+.navSiteName {
+    display: inline-block;
+    position: relative;
+    padding: 5px 20px 0;
+    color: #4878a44a;
+    font-size: 5em;
+    line-height: 1;
+    text-shadow: 0 0 20px #fff;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.navSiteInfo {
+    position: absolute;
+     top: 45%;
+    width: 100%;
+    font-size: 1.2em;
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+.mainHeader h1 {
+    margin-top: auto;
+    padding: 2px 0;
+    font-size: 2em;
+    font-weight: bolder;
+}
+.mainHeader .siteName {
+    padding: 30px 0 0;
+}
+.mainHeader .url {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    letter-spacing: .15em;
+}
+
+/* ナビゲーション */
+.mainNav {
+    margin-top: 50px;
+    text-align: right;
+}
+.mainNav > ul {
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-end;
+}
+.mainNav li {
+    margin-bottom: 5px;
+}
+.mainNav li a {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(90deg, #ffffff calc(100% / 2), #000 calc(100% - (100% / 2))) right / 200% #a2c5cb;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #0000;
+    font-size: 1.2em;
+    transition: .3s;
+}
+.mainNav li a:hover {
+    background-position: left, center;
+}
+
+
+/* トップに戻るボタン */
+.backTop {
+    padding-right: 40px;
+    opacity: 0;
+    text-align: right;
+    transition: .3s;
+    visibility: hidden;
+}
+.backTop a {
+    display: inline-block;
+    position: fixed;
+     bottom: 40px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/design77_main.png') center / 300% no-repeat;
+    box-sizing: border-box;
+    color: #363a3b;
+    line-height: 38px;
+    text-align: center;
+    text-indent: .2em;
+    z-index: 2;
+}
+.view.backTop  {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* フッター（削除OK※デフォルト非表示） */
+.mainFooter {
+    display: none;
+    margin: 5vh 0;
+    font-size: 1rem;
+    text-align: center;
+    opacity: .3;
+}
+
+
+/* レスポンシブ調整用 */
+@media (max-width:850px) {
+    body {
+        font-size: 1.2rem;
+    }
+    h2 {
+        margin-bottom: 1em;
+        font-size: 1.1em;
+    }
+    h2 > div,
+    h2::before{
+        font-size: 1.8em;
+    }
+    h3 {
+        margin: 10px 0 15px;
+        font-size: 1em;
+    }
+    h2 + h3 {
+        margin-top: 1em;
+    }
+    .form,
+    .button {
+        padding: 3px;
+    }
+    .mailForm .form {
+        width: 90%;
+        max-width: 400px;
+        min-width: 50px;
+    }
+    .nameChangeForm .form {
+        width: 8em;
+    }
+    p {
+        margin: 0 1em;
+    }
+    .box {
+        margin: 50px 0;
+    }
+    .space {
+        margin: 1em 2em;
+    }
+    .pageWrap {
+        width: 100%;
+        min-width: 200px;
+        max-width: 550px;
+        padding: 20px;
+        margin: auto;
+    }
+    .mainWrap {
+        margin: 60px 0;
+    }
+    .contentsList {
+        display: block;
+        margin: 1em 1.5em;
+    }
+    .contentsList li {
+        margin-bottom: 5px;
+    }
+    .longList li::after {
+        content: none;
+    }
+    .contentsList .longInfo {
+        display: block;
+    }
+    .moreText {
+        padding: .5em 0 0 0;
+    }
+    .mainHeader {
+        justify-content: flex-start;
+        position: fixed;
+         top: 0;
+         left: 0;
+        width: calc(100% - 80px);
+         max-width: 500px;
+        height: 100vh;
+        padding-top: 100px;
+        background-position: left;
+        transform: translateX(-100%);
+        transition: .5s;
+        z-index: 2;
+    }
+    .mainHeader::after {
+        content: 'menu';
+        position: absolute;
+         top: 20px;
+         right: -60px;
+        width: 100px;
+        height: 30px;
+        padding: 10px 10px 10px 20px;
+        border-bottom: #000 solid 2px;
+        box-sizing: border-box;
+        line-height: 1.1em;
+        text-align: right;
+        text-transform: uppercase;
+    }
+    .mainHeader::before {
+        content: '';
+        display: block;
+        position: absolute;
+         top: 0;
+         left: 100%;
+        height: 0;
+        width: 0;
+        transition: .3s;
+    }
+    .view.mainHeader {
+        transform: translateX(0);
+    }
+    .view.mainHeader::before {
+        width: 100vw;
+        height: 100%;
+        background: #fffd;
+    }
+    .view.mainHeader::after {
+        content: 'close';
+        color: #777;
+        border-color: #b8b8b8;
+    }
+    .mainNavInfo {
+        display: none;
+    }
+    .indexHeader {
+        position: static;
+        width: 100%;
+         max-width: 900px;
+        padding: 10px 30px 60px;
+        background-image: linear-gradient(5deg, #fff 65px, #fff0 65px), url('../img/design77_main.png');
+        transform: none;
+    }
+    .indexHeader::before,
+    .indexHeader::after {
+        content: none;
+    }
+    .indexHeader .mainNavInfo {
+        display: block;
+    }
+    .indexHeader .navSiteName {
+        font-size: 5em;
+    }
+    .siteName {
+        padding-top: 30px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .mainNav {
+        align-self: start;
+        position: static;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .mainNav > ul {
+        flex-direction: column;
+    }
+    .backTop a {
+        bottom: 20px;
+    }
+}
