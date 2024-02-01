@@ -377,7 +377,6 @@ p {
 
 /* フッター（削除OK※デフォルト非表示） */
 .mainFooter {
-    display: none;
     margin: 5vh 0;
     font-size: 1rem;
     text-align: center;
