@@ -67,28 +67,27 @@
                 target="hidden_iframe"
                 onsubmit="submitted=true;"
             >
-            <label for="name">お名前</label><span style="color: red;">※</span>
-            <input
+            <dl>
+            <dt><label for="name">お名前</label><span style="color: red;">※</span></dt>
+            <dd><input
                 name="entry.1866116375"
                 class="form"
                 id="name"
                 placeholder="山田太郎"
                 type="text"
                 required
-            />
-            <br>
-            <label for="furigana-name">フリガナ</label><span style="color: red;">※</span>
-            <input
+            /></dd>
+            <dt><label for="furigana-name">フリガナ</label><span style="color: red;">※</span></dt>
+            <dd><input
                 name="entry.18919429"
                 class="form"
                 id="furigana-name"
                 placeholder="ヤマダタロウ"
                 type="text"
                 required
-            />
-            <br>
-            <label for="age">年齢</label><span style="color: red;">※</span>
-            <input
+            /></dd>
+            <dt><label for="age">年齢</label><span style="color: red;">※</span></dt>
+            <dd><input
                 name="entry.1720266287"
                 class="form"
                 id="age"
@@ -96,18 +95,16 @@
                 min="1"
                 type="number"
                 required
-            />
-            <br>
-            <label for="gender">性別</label><span style="color: red;">※</span>
-            <select name="entry.834280007" class="form" id="gender" required>
+            /></dd>
+            <dt><label for="gender">性別</label><span style="color: red;">※</span></dt>
+            <dd><select name="entry.834280007" class="form" id="gender" required>
                 <option selected disabled>選択してください</option>
                 <option value="男">男</option>
                 <option value="女">女</option>
                 <option value="その他">その他</option>
-            </select>
-            <br>
-            <label for="email">メールアドレス</label>
-            <input
+            </select></dd>
+            <dt><label for="email">メールアドレス</label></dt>
+            <dd><input
                 name="entry.1750445192"
                 class="form"
                 id="email"
@@ -115,19 +112,19 @@
                 type="email"
                 required
             />
-                <p>ご質問など、返信が必要な場合はご入力ください。</p>
-            <br>
-            <label for="text">ご質問・ご感想</label><span style="color: red;">※</span>
-            <textarea
+                <p>ご質問など、返信が必要な場合はご入力ください。</p></dd>
+            <dt><label for="text">ご質問・ご感想</label><span style="color: red;">※</span></dt>
+            <dd><textarea
                 name="entry.693179250"
                 class="form"
                 id="text"
                 placeholder="ご質問やご感想など、ご自由にお書きください。"
                 required
             >
-            </textarea>
-            <br>
+            </textarea></dd>
+            </dl>
             <input type="submit" value="送信" class="button">
+            </form>
                 
             <h4><span>heading4</span></h4>
             <p><a href="">リンク</a>と<em>強調</em>と<strong>もっと強調</strong></p>
