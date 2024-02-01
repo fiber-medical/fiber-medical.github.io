@@ -15,6 +15,7 @@ https://fonts.google.com/specimen/Roboto+Condensed
 html {
     background: transparent;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body {
     background: #fff;
@@ -44,6 +45,12 @@ ul,ol {
 }
 ::selection {
     background-color: #4878a4;
+}
+
+/*somooth_scroll*/
+section {
+  scroll-margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 /* フォント指定まとめて */
